@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<h1>Tablas De Multiplicar</h1>
+<script>
+
+    function saltarLinea(lineas){
+        var lineas;
+        while (lineas > 0){
+            document.write("<br>");
+            lineas = lineas - 1;
+        }
+    }
+
+    function imprimir(frase,lineas){
+        document.write(frase);
+        saltarLinea(lineas);
+    }
+
+    var numeroMiembros = parseInt(prompt("Ingresa el numero de miembros: "));
+    var contador = 1;
+    var totalEdades = 0;
+
+    while (contador <= numeroMiembros){
+
+        edad = parseInt(prompt("Enter la edad de un miembro: "));
+        totalEdades = totalEdades + edad;
+        contador++;
+    }
+
+    imprimir("La media de edades es de: " + totalEdades / numeroMiembros ,1)
+    
+</script>

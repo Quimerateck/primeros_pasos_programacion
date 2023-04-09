@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h1>Numeros pares</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    var numero = 1;
+
+    while (numero <= 100) {
+
+        if (numero > 1) {
+
+            imprimir(numero);
+            numero = numero + 2;
+        }
+        else {
+            numero++;
+        }
+    }
+
+
+</script>

@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<h1>Desafio Loteria</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function sorteo(numero) {
+        return Math.round(Math.random()*numero)
+    }
+
+    numeroPensado = sorteo(parseInt(prompt("Ingresa el numero maximo a sortear: ")));
+    numeroLanzado = parseInt(prompt("Ingresa tu adivinacion"));
+
+    if (numeroLanzado == numeroPensado){
+
+        imprimir("Correcto, Acertaste!!! era el " + numeroPensado)
+
+    } 
+    else {
+        if (numeroLanzado < numeroPensado) {
+            imprimir("Erraste, el numero era mayor " + numeroPensado)
+        }
+        else{
+            imprimir("Erraste, el numero era menor " + numeroPensado)
+        }
+    }
+    
+
+    imprimir(sortear)
+
+</script>

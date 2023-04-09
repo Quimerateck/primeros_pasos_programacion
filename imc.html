@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+<h1>Programa Calcular IMC</h1>
+<script>
+
+    function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    // Calcula el IMC e imprime su resultado
+    /* 
+    function calcularImc(peso,altura,nombre) {
+        imc = peso /(altura*altura);
+        imprimir("El IMC de " + nombre + " es: " + imc);
+    }
+    */
+    //calcularImc(71, 1.72, "Christian");
+    //calcularImc(75, 1.73, "Felipe");
+
+    // Calcula el IMC pero RETORNA el resulta y este puede ser utilizado 
+    // de manera mas dinamica
+
+    function calcularImc(peso,altura) {
+
+        return imc = peso / (altura*altura)
+
+    }
+
+    imprimir("La media de IMC de Christian y Felipe es de: " + (calcularImc(71, 1.72) + calcularImc(75, 1.73)/2));
+    imprimir("La media de IMC de Christian y Felipe es de: " + (calcularImc(65, 1.68) + calcularImc(55, 1.60)/2));
+    
+    nombre = prompt("Ingresa un nombre: ")
+    peso = prompt(nombre + ", ingresa tu peso: ")
+    altura = prompt(nombre + ", ingresa tu altura: ")
+    imccalculado = calcularImc(peso, altura)
+    imprimir(nombre + " tu IMC es de: " + imccalculado)
+
+    if (imccalculado < 18.5) {
+
+        imprimir("Por debajo de lo recomendado")
+    }
+
+    if (imccalculado >= 18.5 && imccalculado < 24.9) {
+
+        imprimir("Peso saludable")
+    }
+
+    if (imccalculado >= 25 && imccalculado < 29.9) {
+
+        imprimir("Sobrepeso")
+
+    }
+    
+    if (imccalculado >= 30) {
+
+        imprimir("Obesidad")
+
+    }
+
+</script>

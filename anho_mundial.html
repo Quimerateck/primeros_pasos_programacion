@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h1>AÑOS DEL MUNDIAL</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+
+    var anhoMundial = 1930;
+    var anhoLimite = parseInt(prompt("Hasta que año deseas calcular"));
+
+    while (anhoMundial <= anhoLimite) {
+
+        imprimir("En el año " + anhoMundial + " hubo un mundial");
+        anhoMundial = anhoMundial + 4;
+
+    }
+
+    imprimir("Fin")
+
+</script>
